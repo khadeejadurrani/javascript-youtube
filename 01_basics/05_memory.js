@@ -1,4 +1,4 @@
-//stack memeory ,,where you atually wokr on the copy of the original variable so even if you make
+//stack memeory ,,where you atually work on the copy of the original variable so even if you make
 //a change in the second Name varaible ,,the change is made in copy of the second name ,while original 
 // remain equal to first nam ,as written in code ,and  in output the value of copy is printed/given
 let firstName = "khadeeja";
