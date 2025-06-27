@@ -30,3 +30,31 @@ console.log(newString.length);
 console.log(newString.toUpperCase());
 console.log(newString.charAt(2));
 console.log(newString.indexOf('d'));
+
+//printing a substring or part of the string
+//substring() ,,does accept -ve value ..and if we give (0,4),then it will start from 0 index and will give 
+//substring till 4-1 ,,it minuses 1 at the last index
+const newString1 = newString.substring(0,4);
+console.log(newString1);
+
+
+const newString2 = newString.slice(0,4);
+console.log(newString1);
+
+//using trim,,,removes the extra spaces
+const newStringOne="     khadeeja     ";
+console.log(newStringOne);
+console.log(newStringOne.trim());
+
+//replacing a string part with another string
+const url = "https://khadeeja.com/khadeeja%20durrani";
+console.log(url.replace('%20','-'));
+
+//asking questions from string
+console.log(url.includes('durrani'));
+console.log(url.includes('laiba'));
+
+//converting string into array ,we want the string to be divided into different parts based on a - (dash)
+//or any point and then each part is an array element
+const newStringTwo = "khadeeja-durrani-20";
+console.log(newStringTwo.split('-'));
