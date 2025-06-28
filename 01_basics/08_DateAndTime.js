@@ -53,3 +53,5 @@ newDate3.toLocaleString('default',{
     weekday : "long"
 });
 
+let dayName = newDate3.toLocaleString('default', { weekday: "long" });
+console.log(`Today is ${dayName}`);
