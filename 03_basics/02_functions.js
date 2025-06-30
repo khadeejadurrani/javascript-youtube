@@ -41,4 +41,13 @@ handleObject({
     price : 999
 });
 
-//PASSING ARRAYS 
+//PASSING ARRAYS IN A FUNCTION
+const myNewArray = [200 , 300 , 400 , 500]
+
+function returnSecondValue(getArray){
+    return getArray[1];
+}
+console.log(returnSecondValue(myNewArray));
+
+//we can also pass whole array as parameter
+console.log(returnSecondValue([100,200,300,400]));
