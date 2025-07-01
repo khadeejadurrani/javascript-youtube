@@ -68,3 +68,11 @@ const person = {
 };
 
 person.speak();
+
+//9. Arrow Function Cannot Be Used as Constructor
+const Car = (model) => {
+  this.model = model;
+};
+
+const myCar = new Car("Toyota");  // ❌ Error: Car is not a constructor
+
