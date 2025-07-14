@@ -1,0 +1,1 @@
+document.getElementById("my para").innerText = "HELLO KHADEEJA DURRANI";
