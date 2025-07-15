@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child nodes| Chai aur code</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    
+    <script>
+        //we have to create div element in through javascript
+        const div = document.createElement("div");
+        console.log(div);
+        //we are adding attribute to this div
+        div.className = "main"; //class name set
+
+        // making the id a random number for fun and multiplying he math.random() number by 10 ,to make it between 0-10 ,instead of 0-1 range
+        div.id = Math.round(Math.random()*10 + 1); //1 added to never get 0 and then roundoff the whole result from Math.random()
+
+        //making custom attributes
+        div.setAttribute("title","generated title"); /*it meand that i set attribute of title ,which
+        has value of generated title */
+
+        //doing styling here for the attribute
+        div.style.backgroundColor = "green";
+        div.style.padding = "12px"; 
+
+        //wrtiting inside the div ,creating textnode
+        const addText = document.createTextNode("Khadeeja Durrani");
+
+        //till now the created div is only in memory
+        //now we will actually add it to html body
+        div.appendChild(addText); //here adding just the text node we created to the div we created earlier
+        
+        document.body.appendChild(div);
+    </script>
+</body>
+</html>
