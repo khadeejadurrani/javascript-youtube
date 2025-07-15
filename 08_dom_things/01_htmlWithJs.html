@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM practice</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1 id="main_heading">Welcome to the fruit land</h1>
+
+    <p class="fruit">Apple</p>
+    <p class="fruit">Mango</p>
+    <p class="fruit">Banana</p>
+
+    <button onclick="changeHeading()">Change heading</button>
+    <button onclick="listFruits()">list fruits</button>
+    <button onclick="addFruit()">Add new fruit</button>
+
+    <ul id="fruit_list"></ul>
+
+    <script>
+        function changeHeading(){
+            const heading = document.getElementById("main_heading");
+            heading.textContent = "🍓 🍌🍍🍇🍉Fruits kingdom is now changing 🍊🍒🥝";
+        }
+
+        function listFruits(){
+            //getting htmlcollection here
+            const makeFruitList = document.getElementsByClassName("fruit");
+
+            for(let i=0;i<makeFruitList.length;i++){
+                console.log(`fruits : ${makeFruitList[i].textContent}`);
+            }
+
+            alert("fruit list is printed in console tab");
+        }
+
+        function addFruit(){
+            //adding the new fruit to just html body here
+            const newFruit = document.createElement("p");
+            newFruit.textContent = "lichi";
+            newFruit.className = "fruit";
+            //now adding this newFruit at the end of html page
+            document.body.appendChild(newFruit);
+
+            //collecting all fruits (having className of fruit),including the new ones here
+            const allNewFruitList = document.querySelectorAll(".fruit");
+
+            //clearing the previous fruit list(in which the old ones are not included) here
+            const oldFruitList = document.getElementById("fruit_list");
+            oldFruitList.innerHTML = "";
+
+            //here making list of the all the fruits included the new ones which are added
+            //and printing the new fruit list here
+            allNewFruitList.forEach(fruit =>{
+                const list = document.createElement("li");
+                list.textContent = fruit.textContent;
+
+                //addign the new fruit list at the end of html page
+                allNewFruitList.appendchild(list);
+            })
+
+        }
+    </script>
+
+</body>
+</html>
