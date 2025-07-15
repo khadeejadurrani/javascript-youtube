@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning 1</title>
+</head>
+<body>
+    <!-----//we want to change this unordered list color by dom manipulation----->
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li> 
+    </ul>
+
+    <script >
+    const myUnorderedList = document.querySelector('ul');
+    myUnorderedList.style.backgroundColor = "green";
+    myUnorderedList.style.padding = "100px";
+    
+    <!-- now taking query selector inside the queryselector that is myUnorderedList-->
+    const myList = myUnorderedList.querySelector('li') //<!--this will get the first list of ul-->
+    myList.innerHTML = "five"
+    myList.style.backgroundColor = "orange";
+
+</script>
+</body>
+</html>
