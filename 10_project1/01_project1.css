@@ -1,0 +1,21 @@
+.button{
+  display: inline-block;
+  width: 30px;
+  height:30px;
+  margin: 10px;
+  /* border-radius: 90%; */
+  border: 2px solid black;
+  cursor: pointer;
+}
+#grey{
+    background-color: grey;
+}
+#red{
+    background-color: red;
+}
+#blue{
+    background-color: blue;
+}
+#yellow{
+    background-color: yellow;
+}
