@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number Game</title>
+    <link rel="stylesheet" href="01_project4.css">
+</head>
+<body>
+    
+    <!--write the game name in big heading-->
+    <h1>Guess The Number(0-100)</h1>
+
+    <!--write what to do in this game -->
+    <p>Enter your guess below, a number between 0-100</p>
+
+    <!--make an input box here where the user types the number he/she has guessed ,this input has a 
+    type number ,its id is userGuess and min value is 1 and maximum is 100-->
+    <input type="number" id="userGuess" min="1" max="100">
+
+    <!--add a button here ,for the user to check if the number he/she has put in the above inbox
+    is correct ,(has guessed right) or it is lower or upper than guessed number,only checking here-->
+    <button id="checkButton">Check</button>
+
+    <!--add a paragraph which will tell if the result is lower than gueseed number ,or correct 
+    or upper then the guessed number-->
+    <p id="result"></p>
+
+    <!--adding a paragraph here to show how many times the user has attempted to guess the correct number
+    ,,putting or writing the default value 0 here-->
+    <p id="attempts">Attempts : 0</p>
+
+    <script src="01_project4.js"></script>
+</body>
+</html>

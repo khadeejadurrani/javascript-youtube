@@ -1,0 +1,30 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+    padding:60px;
+    background-color: #c4def5;
+}
+input,button{
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+}
+button{
+    background-color: #37526d;
+    color:white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+#attempts {
+  background-color: #e0edf9;    
+  padding: 10px 15px;            /* space inside the box */
+  border-radius: 8px;            /* rounded corners */
+  display: inline-block;         /* so the box wraps the text only */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* optional soft shadow */
+  font-weight: bold;             /* optional - to make text stand out */
+}
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    }
