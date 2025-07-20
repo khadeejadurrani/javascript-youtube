@@ -19,8 +19,13 @@ body{
     padding :20px 50px;
     margin-top: 10px;
     border-radius: 10px;
+    width : 250px;
+    text-align: center;
+    font-family: monospace;
+    box-sizing: border-box;
 }
 #banner{
     color:white;
     font-family: Arial, sans-serif;
+     font-size: 30px;
 }
