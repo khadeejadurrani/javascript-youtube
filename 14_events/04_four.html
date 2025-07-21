@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Pressed</title>
+</head>
+<body>
+    <input type="text" id="box" placeholder="type something">
+
+    <script>
+        const inputbox = document.getElementById("box");
+        inputbox.addEventListener("keydown",function(e){
+            console.log(`key pressed : ${e.key}`); //tells which key was pressed
+        })
+    </script>
+</body>
+</html>
