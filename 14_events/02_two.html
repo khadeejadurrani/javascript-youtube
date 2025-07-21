@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changing text</title>
+</head>
+<body>
+    <p id="para">Old text</p>
+    <button id="btn">Change Text</button>
+    <script>
+        const para = document.getElementById("para");
+        const button = document.getElementById("btn");
+
+        button.addEventListener("click",function(){
+            para.innerHTML = "new Text hehe";
+        })
+    </script>
+</body>
+</html>
