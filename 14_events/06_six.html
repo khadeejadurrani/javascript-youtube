@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USING NAMED FUNCTIONS</title>
+</head>
+<body>
+    <button id="hiBtn">Say hi</button>
+    <script>
+        function sayHi(){
+            alert("button clicked and it says HI");
+        }
+        const clickButton = document.getElementById("hiBtn");
+        clickButton.addEventListener("click",sayHi);
+
+    </script>
+</body>
+</html>
