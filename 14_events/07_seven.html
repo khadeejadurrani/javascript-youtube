@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOGGLING</title>
+    <style>
+        #shirt{
+            width : 200px;
+            height : 100px;
+            text-align : center;
+            line-height : 100px;
+        }
+        .default{
+            background-color : yellowgreen;
+            color : red;
+        }
+        .red{
+            background-color : red;
+            color : yellowgreen;
+        }
+
+    </style>
+</head>
+<body>
+    <!--practicing toggle
+    we have a shirt and we want to mkae its color red and 
+    if it has color red then it changes to it to normal-->
+    <!--when we press the button the white shirt(div simply) changes to red and it is red
+    ,then change it to white-->
+
+    <div id="shirt" class="default">I am a shirt</div>
+    <button id="toggleBtn">change shirt color</button>
+
+    <script>
+        const shirt = document.getElementById("shirt");
+        const toggleBtn = document.getElementById("toggleBtn");
+
+        toggleBtn.addEventListener("click",function(){
+            shirt.classList.toggle("red");
+        });
+    </script>
+</body>
+</html>
