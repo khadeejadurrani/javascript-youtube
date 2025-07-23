@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event target</title>
+</head>
+<body>
+    <ul id="list">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <script>
+        const list = document.getElementById("list");
+
+        list.addEventListener("click",function(event){
+            if(event.target.tagName === "LI"){
+                event.target.style.color = "pink";
+                console.log(event.target.tagName);
+            }
+        });
+    </script>
+</body>
+</html>
