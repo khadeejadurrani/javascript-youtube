@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop propagation</title>
+</head>
+<style>
+    #box{
+        background-color :skyblue;
+        padding: 50px;
+    }
+    #unorderedList{
+        background-color :pink;
+        padding: 30px;
+    }
+    .list{
+        background-color : rgb(211, 185, 235);
+        padding: 10px;
+    }
+</style>
+<body>
+    <div id="box">
+        <ul id="unorderedList">
+            <li class="list">One</li>
+            <li class="list">two</li>
+            <li class="list">three</li>
+        </ul>
+    </div>
+
+    <script>
+        const DIV = document.getElementById("box");
+        const UNORDEREDLIST = document.getElementById("unorderedList");
+        const LISTS = document.querySelector(".list");
+
+        DIV.addEventListener("click",function(){
+            console.log("div clicked");
+        });
+
+        UNORDEREDLIST.addEventListener("click",function(event){
+            event.stopPropagation();
+            console.log("unordered list clicked");
+        });
+        
+        LISTS.addEventListener("click",function(event){
+            event.stopPropagation();
+            console.log("list clicked");
+        });
+    </script>
+</body>
+</html>
