@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preventing the default submit</title>
+</head>
+<body>
+    <form id="myForm">
+    <input type="text" placeholder="type something">
+    <button type="submit">submit the input</button>
+    </form>
+    <script>
+        const box = document.getElementById("myForm");
+
+        box.addEventListener("submit",function(event){
+            event.preventDefault();
+            alert("form not submitted");
+        })
+    </script>
+</body>
+</html>
