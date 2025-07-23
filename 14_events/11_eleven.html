@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTIPLE BUTTONS</title>
+</head>
+<body>
+    <button class="BUTTONS">one</button>
+    <button class="BUTTONS">two</button>
+    <button class="BUTTONS">three</button>
+
+    <script>
+        const button = document.querySelectorAll(".BUTTONS");//here i made a mistake ,write . with class
+
+        button.forEach(function(eachButton){
+            eachButton.addEventListener("click",function(){
+                alert("button clicked :"+ this.innerText);
+            })
+        });
+    </script>
+</body>
+</html>
