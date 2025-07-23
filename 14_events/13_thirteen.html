@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>printign the position of mosue on screen</title>
+</head>
+<body>
+    <p style="width: 200px; height:auto ; border:black; background-color: blanchedalmond;">
+        i print mouse position
+    </p>
+
+    <script>
+        const para = document.querySelector("p");
+
+        document.addEventListener("mousemove",function(e){ //to print the x and y component of mouse regarding the whole page 
+            //then use document ,instead of para
+            para.innerHTML = `X : ${e.clientX} , Y: ${e.clientY}`;
+        })
+    </script>
+</body>
+</html>

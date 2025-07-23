@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>circle forming on browser</title>
+</head>
+    <style>
+        body{
+            background-color: black;
+            height : 100vh;
+            position:relative;
+            overflow: hidden;
+            margin :0;
+        }
+        .circle{
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        border: 5px solid red ;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+        }
+    </style>
+<body>
+    <script>
+        /*as we are taking thw whole screen and mousemove is an event so we apply event listenenr and since circle is created when mouse moves
+        so we make  a circle when the event happens */
+        document.addEventListener("mousemove",function(e){
+            //create a new circle ,and that circle is created from a div
+            const circle = document.createElement('div');
+            /*circle is created and we give it its height , width ,border radius and other properties through circle class ,and circle class
+            has defined properties in css */
+
+            circle.classList.add("circle"); //the circle in the "" is the class name
+
+            /*now everytime a new circle is created its position is different ont he screent than previous one ,so we give it horizontal and vertical
+            direction everytime */
+            circle.style.left =`${e.clientX}px`;
+            circle.style.top =`${e.clientY}px`;
+
+            //now add the circle to the screen by appending this 
+            document.body.appendChild(circle);
+
+            //remove the old circle after a certain time
+            setTimeout(()=>{
+                circle.remove();
+            },1000);
+        });
+
+    </script>
+</body>
+</html>
