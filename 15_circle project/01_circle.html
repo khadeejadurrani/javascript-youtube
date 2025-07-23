@@ -27,7 +27,7 @@
     <script>
         /*as we are taking thw whole screen and mousemove is an event so we apply event listenenr and since circle is created when mouse moves
         so we make  a circle when the event happens */
-        document.addEventListener("mousemove",function(e){
+        document.addEventListener("click",function(e){
             //create a new circle ,and that circle is created from a div
             const circle = document.createElement('div');
             /*circle is created and we give it its height , width ,border radius and other properties through circle class ,and circle class
@@ -44,9 +44,9 @@
             document.body.appendChild(circle);
 
             //remove the old circle after a certain time
-            setTimeout(()=>{
-                circle.remove();
-            },1000);
+            // setTimeout(()=>{
+            //     circle.remove();
+            // },1000);
         });
 
     </script>
