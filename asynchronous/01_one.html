@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC 1</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">stop</button>
+    <script>
+    //directly writing the function
+    setTimeout(function(){
+        console.log("khadeeja1");
+    },5000);
+
+    //giving function reference to setTimeout() 
+    const khadeeja = function(){
+        console.log("khadeeja2");
+    }
+
+    setTimeout(khadeeja,5000);
+
+    //we want to change the heading after 3 seconds ,using the function reference
+    const changeText  = function(){
+        const changeH1 = document.querySelector('h1');
+        changeH1.innerHTML = "today is the 25th july";
+    }
+    //now pass the function as reference in timeout
+    const setChange = setTimeout(changeText,5000);
+
+    //using clearTimeout -->here using it in an event , when the button stop is clicked ,the changing of  heading with help of timeout is stopped
+    const button = document.getElementById('stop');
+
+    button.addEventListener("click",function(){
+        clearTimeout(setChange);
+        console.log("clearTimeout applied");
+    });
+
+    
+</script>
+</body>
+</html>

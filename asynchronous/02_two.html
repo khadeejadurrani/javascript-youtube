@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+
+<script>
+    /* when we press the start  button the setinterval does it work ,and when we press stop
+    the setInterval stop working */
+
+    const startFunction = function(str){
+            console.log(str,Date.now());
+        }
+        let startInterval;
+
+    const startButton = document.getElementById("start");
+    startButton.addEventListener("click",()=>{
+
+        if(!startInterval){
+        startInterval = setInterval(startFunction ,1000,"khadeeja"); /*the third paramter is actually the function
+        passing to parameter */
+        }
+    })
+
+    const stopButton = document.getElementById("stop");
+    stopButton.addEventListener("click",()=>{
+        clearInterval(startInterval);
+            startInterval = null;
+    })
+</script>
+</html>
