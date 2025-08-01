@@ -11,7 +11,7 @@ fetch('https://jsonplaceholder.typicode.com/posts',{
 })
 .then(data => data.json())
 .then(data =>{
-    console.log(`posted data: ${data}`)
+    console.log("posted data:",data)
 })
 .catch(error=>{
     console.log(error);
