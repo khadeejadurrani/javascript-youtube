@@ -9,3 +9,6 @@ class Computer{
 }
 const comp = new Computer("DELL","MSER34");
 comp.greet();
+
+const comp1 = new Computer("LENOVO","ER16");
+comp1.greet();
