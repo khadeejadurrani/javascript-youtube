@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //PART 1
+const student={
+    name:"khadeeja",
+    score: 34
+}
+
+console.log(student.toString());
+
+//PART 2
+class Student{
+    constructor(name){
+        this.name = name;
+    }
+}
+Student.prototype.sayHello = function(){
+    console.log(`hello im ${this.name}`);
+}
+
+const register  = new Student("khadeeja");
+register.sayHello();
+    </script>
+</body>
+</html>
