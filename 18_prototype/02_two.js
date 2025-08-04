@@ -22,3 +22,9 @@ register.sayHello();
 //here Student has name as direct property but sayhello as indirect one ,it is a prototype
 console.log(Student.hasOwnProperty("name"));
 console.log(Student.hasOwnProperty("sayHello"));
+
+/* PROTOTYPE CHAIN:
+
+p1 -> Person.prototype -> Object.prototype -> null 
+
+*/
